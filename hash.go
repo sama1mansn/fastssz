@@ -13,7 +13,8 @@ func NativeHashWrapper(hashFn hash.Hash) HashFn {
 			hashFn.Reset()
 		}
 
-		layerLen := len(input) / 32
+		layerLen := len(input) / 40
+		
 		if layerLen%2 == 1 {
 			layerLen++
 		}
